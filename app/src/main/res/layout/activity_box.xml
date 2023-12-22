@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- SearchView -->
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search for boxes"/>
+
+    <!-- NestedScrollView to encapsulate both SearchView and existing content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Existing content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Categories -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center">
+
+                <!-- Category 1 -->
+                <LinearLayout
+                    android:id="@+id/romance"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_marginRight="10dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:src="@drawable/box1"
+                        android:contentDescription="Image description for accessibility"
+                        />
+
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="serif"
+                        android:gravity="center"
+                        android:text="New Romance "
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:id="@+id/newname"
+                        />
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="serif"
+                        android:gravity="center"
+                        android:text="1850 EGP"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:id="@+id/newprice"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="addToCartButtonClicknew"
+                        android:text="Add to Cart"
+                        android:layout_marginRight="10dp"/>
+                </LinearLayout>
+
+                <!-- Category 2 -->
+                <LinearLayout
+                    android:id="@+id/grand"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/b1"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_marginLeft="18dp"
+                        android:contentDescription="Image description for accessibility"
+
+                        />
+
+                    <TextView
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="Grandeur"
+                        android:fontFamily="serif"
+
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+
+                        android:layout_marginLeft="18dp"
+                        android:id="@+id/grandname"
+                        />
+                    <TextView
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="2210 EGP"
+                        android:fontFamily="serif"
+
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+
+                        android:layout_marginLeft="18dp"
+                        android:id="@+id/grandprice"
+                        />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="addToCartButtonClickgrand"
+                        android:text="Add to Cart"
+                        android:layout_marginLeft="15dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center">
+
+                <!-- Category 1 -->
+                <LinearLayout
+                    android:id="@+id/mix"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/mix"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_marginRight="10dp"
+                        android:contentDescription="Image description for accessibility"
+                        />
+
+
+                    <TextView
+                        android:layout_width="138dp"
+                        android:layout_height="wrap_content"
+                        android:text="Color Mix"
+                        android:fontFamily="serif"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/mixname"
+                        />
+                    <TextView
+                        android:layout_width="138dp"
+                        android:layout_height="wrap_content"
+                        android:text="1970EGP"
+                        android:fontFamily="serif"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/mixprice"
+                        />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="addToCartButtonClickmix"
+                        android:text="Add to Cart"
+                        android:layout_marginRight="10dp"/>
+                </LinearLayout>
+
+                <!-- Category 2 -->
+                <LinearLayout
+                    android:id="@+id/amour"
+                    android:layout_marginBottom="30dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/b3"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_marginLeft="18dp"
+                        android:contentDescription="Image description for accessibility"
+                        />
+
+                    <TextView
+                        android:layout_width="137dp"
+                        android:layout_height="wrap_content"
+                        android:text="My Amour"
+                        android:fontFamily="serif"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginLeft="18dp"
+                        android:id="@+id/myname"
+                        />
+                    <TextView
+                        android:layout_width="137dp"
+                        android:layout_height="wrap_content"
+                        android:text="4520 EGP"
+                        android:fontFamily="serif"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginLeft="18dp"
+                        android:id="@+id/myprice"
+                        />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="addToCartButtonClickmy"
+                        android:text="Add to Cart"
+                        android:layout_marginLeft="15dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Category 3 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center">
+
+                <!-- Category 1 -->
+                <LinearLayout
+                    android:id="@+id/pinkblack"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/b5"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_marginRight="10dp"
+                        android:contentDescription="Image description for accessibility"
+                        />
+
+
+                    <TextView
+                        android:layout_width="138dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="Pink black"
+                        android:fontFamily="serif"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/pinkname"
+                        />
+                    <TextView
+                        android:layout_width="138dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="3120 EGP"
+                        android:fontFamily="serif"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/pinkprice"
+                        />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="addToCartButtonClickpink"
+                        android:text="Add to Cart"
+                        android:layout_marginRight="10dp"/>
+                </LinearLayout>
+
+                <!-- Category 2 -->
+                <LinearLayout
+                    android:id="@+id/amber"
+                    android:layout_marginBottom="30dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/b4"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_marginLeft="18dp"
+                        android:contentDescription="Image description for accessibility"
+                        />
+
+                    <TextView
+                        android:layout_width="137dp"
+                        android:layout_height="wrap_content"
+                        android:text="Amber"
+                        android:fontFamily="serif"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginLeft="18dp"
+                        android:id="@+id/ambername"
+                        />
+                    <TextView
+                        android:layout_width="137dp"
+                        android:layout_height="wrap_content"
+                        android:text="1450 EGP"
+                        android:fontFamily="serif"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginLeft="18dp"
+                        android:id="@+id/amberprice"
+                        />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="addToCartButtonClickamber"
+                        android:text="Add to Cart"
+                        android:layout_marginLeft="15dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="65dp"
+                android:onClick="gotocart"
+                android:text="Cart"
+                android:textSize="20sp"
+                android:layout_gravity="center"/>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

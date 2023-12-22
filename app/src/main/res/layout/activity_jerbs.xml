@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- SearchView -->
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search for boxes"/>
+
+    <!-- NestedScrollView to encapsulate both SearchView and existing content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Existing content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Categories -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center">
+
+                <!-- Category 1 -->
+                <LinearLayout
+                    android:id="@+id/snow"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_marginRight="10dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:src="@drawable/j1"
+                        android:contentDescription="Image description for accessibility"
+                        />
+
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="serif"
+                        android:gravity="center"
+                        android:text="Snow White"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:id="@+id/snowname"
+                        />
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="serif"
+                        android:gravity="center"
+                        android:text="1299 EGP"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:id="@+id/snowprice"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="addToCartButtonClicksnow"
+                        android:text="Add to Cart"
+                        android:layout_marginRight="10dp"/>
+                </LinearLayout>
+
+                <!-- Category 2 -->
+                <LinearLayout
+                    android:id="@+id/bride"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/j2"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_marginLeft="18dp"
+                        android:contentDescription="Image description for accessibility"
+                        />
+
+                    <TextView
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="Bride Time"
+                        android:fontFamily="serif"
+
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+
+                        android:layout_marginLeft="18dp"
+                        android:id="@+id/bridename"
+                        />
+                    <TextView
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="1185 EGP"
+                        android:fontFamily="serif"
+
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:id="@+id/brideprice"
+                        android:layout_marginLeft="18dp"
+                        />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="addToCartButtonClickbride"
+                        android:text="Add to Cart"
+                        android:layout_marginLeft="15dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center">
+
+                <!-- Category 1 -->
+                <LinearLayout
+                    android:id="@+id/queen"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/j3"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_marginRight="10dp"
+                        android:contentDescription="Image description for accessibility"
+                        />
+
+
+                    <TextView
+                        android:layout_width="138dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="Queen"
+                        android:fontFamily="serif"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/queenname"
+                        />
+                    <TextView
+                        android:layout_width="138dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="999 EGP"
+                        android:fontFamily="serif"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/queenprice"
+                        />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="addToCartButtonClickqueen"
+                        android:text="Add to Cart"
+                        android:layout_marginRight="10dp"/>
+                </LinearLayout>
+
+                <!-- Category 2 -->
+                <LinearLayout
+                    android:id="@+id/story"
+                    android:layout_marginBottom="30dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/j4"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_marginLeft="18dp"
+                        android:contentDescription="Image description for accessibility"
+                        />
+
+                    <TextView
+                        android:layout_width="137dp"
+                        android:layout_height="wrap_content"
+                        android:text="Wedding Story"
+                        android:fontFamily="serif"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginLeft="18dp"
+                        android:id="@+id/storyname"
+                        />
+                    <TextView
+                        android:layout_width="137dp"
+                        android:layout_height="wrap_content"
+                        android:text="1820 EGP"
+                        android:fontFamily="serif"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginLeft="18dp"
+                        android:id="@+id/storyprice"
+                        />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="addToCartButtonClickstory"
+                        android:text="Add to Cart"
+                        android:layout_marginLeft="15dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Category 3 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center">
+
+                <!-- Category 1 -->
+                <LinearLayout
+                    android:id="@+id/lux"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/j5"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_marginRight="10dp"
+                        android:contentDescription="Image description for accessibility"
+                        />
+
+
+                    <TextView
+                        android:layout_width="138dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="Luxury Bridal"
+                        android:fontFamily="serif"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/luxname"
+                        />
+                    <TextView
+                        android:layout_width="138dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="1185 EGP"
+                        android:fontFamily="serif"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/luxprice"
+                        />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="addToCartButtonClicklux"
+                        android:text="Add to Cart"
+                        android:layout_marginRight="10dp"/>
+                </LinearLayout>
+
+                <!-- Category 2 -->
+                <LinearLayout
+                    android:id="@+id/para"
+                    android:layout_marginBottom="30dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/j6"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_marginLeft="18dp"
+                        android:contentDescription="Image description for accessibility"
+                        />
+
+                    <TextView
+                        android:layout_width="137dp"
+                        android:layout_height="wrap_content"
+                        android:text="paradise"
+                        android:fontFamily="serif"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginLeft="18dp"
+                        android:id="@+id/paraname"
+                        />
+                    <TextView
+                        android:layout_width="137dp"
+                        android:layout_height="wrap_content"
+                        android:text="999 EGP"
+                        android:fontFamily="serif"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginLeft="18dp"
+                        android:id="@+id/paraprice"
+                        />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="addToCartButtonClickpara"
+                        android:text="Add to Cart"
+                        android:layout_marginLeft="15dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="65dp"
+                android:onClick="gotocart"
+                android:text="Cart"
+                android:textSize="20sp"
+                android:layout_gravity="center"/>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

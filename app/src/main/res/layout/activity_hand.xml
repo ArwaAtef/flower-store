@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- SearchView -->
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search for bouquets"/>
+
+        <!-- NestedScrollView to encapsulate both SearchView and existing content -->
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <!-- Existing content -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!-- Categories -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center">
+
+                    <!-- Category 1 -->
+                    <LinearLayout
+                        android:id="@+id/simply_rose"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_marginRight="10dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:src="@drawable/h1"
+                            android:contentDescription="Image description for accessibility"
+                            />
+
+
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="serif"
+                            android:gravity="center"
+                            android:text="Simple Rose"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:id="@+id/itemNameTextView"
+                            />
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="serif"
+                            android:gravity="center"
+                            android:text="895 EGP"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:id="@+id/itemPriceTextView"
+                            />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="addToCartButtonClickRose"
+                            android:text="Add to Cart"
+                            android:layout_marginRight="10dp"/>
+                    </LinearLayout>
+
+                    <!-- Category 2 -->
+                    <LinearLayout
+                        android:id="@+id/purple"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/h2"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:layout_marginLeft="18dp"
+                            android:contentDescription="Image description for accessibility"
+                            />
+
+
+
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+
+                            android:text="Purple Sunset"
+                            android:fontFamily="serif"
+
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+
+                            android:layout_marginLeft="18dp"
+
+                            android:id="@+id/purpleName"
+                            />
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+
+                            android:text="1119 EGP"
+                            android:fontFamily="serif"
+
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:id="@+id/purpleprice"
+
+                            android:layout_marginLeft="18dp"
+                            />
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="addToCartButtonClickSunset"
+                            android:text="Add to Cart"
+                            android:layout_marginLeft="20dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center">
+
+                    <!-- Category 1 -->
+                    <LinearLayout
+                        android:id="@+id/rosy"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/h3"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:layout_marginRight="10dp"
+                            android:contentDescription="Image description for accessibility"
+                            />
+
+
+
+
+                        <TextView
+                            android:layout_width="138dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rosyname"
+                            android:text="Rosy Angel"
+                            android:fontFamily="serif"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:layout_marginRight="10dp"
+                            />
+                        <TextView
+                            android:layout_width="138dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rosyprice"
+                            android:text="1220 EGP"
+                            android:fontFamily="serif"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:layout_marginRight="10dp"
+                            />
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="addToCartButtonClickRosy"
+                            android:text="Add to Cart"
+                            android:layout_marginRight="10dp"/>
+                    </LinearLayout>
+
+                    <!-- Category 2 -->
+                    <LinearLayout
+                        android:id="@+id/brill"
+                        android:layout_marginBottom="30dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/h4"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:layout_marginLeft="18dp"
+                            android:contentDescription="Image description for accessibility"
+                            />
+
+
+
+                        <TextView
+                            android:layout_width="137dp"
+                            android:layout_height="wrap_content"
+                            android:text="Brilliance"
+                            android:fontFamily="serif"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:layout_marginLeft="18dp"
+                            android:id="@+id/bname"
+                            />
+                        <TextView
+                            android:layout_width="137dp"
+                            android:layout_height="wrap_content"
+                            android:text="980 EGP"
+                            android:fontFamily="serif"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:layout_marginLeft="18dp"
+                            android:id="@+id/bprice"
+                            />
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="addToCartButtonClickB"
+                            android:text="Add to Cart"
+                            android:layout_marginLeft="15dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Category 3 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center">
+
+                    <!-- Category 1 -->
+                    <LinearLayout
+                        android:id="@+id/dew"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="25dp"
+                        >
+
+                        <ImageView
+                            android:layout_width="140dp"
+                            android:layout_height="140dp"
+                            android:src="@drawable/h5"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:layout_marginRight="10dp"
+                            android:contentDescription="Image description for accessibility"
+                            />
+
+
+
+
+                        <TextView
+                            android:layout_width="138dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/dewname"
+                            android:text="Morning Dew"
+                            android:fontFamily="serif"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:layout_marginRight="10dp"
+                            />
+
+                        <TextView
+                            android:layout_width="138dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/dewprice"
+                            android:text="2000 EGP"
+                            android:fontFamily="serif"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:layout_marginRight="10dp"
+                            />
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="addToCartButtonClickdew"
+                            android:text="Add to Cart"
+                            android:layout_marginRight="10dp"/>
+                        <!-- Add more TextViews or other views if needed -->
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="65dp"
+                    android:onClick="gotocart"
+                    android:text="Cart"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"/>
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>

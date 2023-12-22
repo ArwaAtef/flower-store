@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- SearchView -->
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search for boxes"/>
+
+    <!-- NestedScrollView to encapsulate both SearchView and existing content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Existing content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Categories -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center">
+
+                <!-- Category 1 -->
+                <LinearLayout
+                    android:id="@+id/flash"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_marginRight="10dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:src="@drawable/v1"
+                        android:contentDescription="Image description for accessibility"
+                        />
+
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="serif"
+                        android:gravity="center"
+                        android:text="Flashback"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:id="@+id/flashname"
+                        />
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="serif"
+                        android:gravity="center"
+                        android:text="1396 EGP"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:id="@+id/flashprice"
+                        />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="addToCartButtonClickflash"
+                        android:text="Add to Cart"
+                        android:layout_marginRight="10dp"/>
+                </LinearLayout>
+
+                <!-- Category 2 -->
+                <LinearLayout
+                    android:id="@+id/mod"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/v2"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_marginLeft="18dp"
+                        android:contentDescription="Image description for accessibility"
+                        />
+
+                    <TextView
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="Modality"
+                        android:fontFamily="serif"
+
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+
+                        android:layout_marginLeft="18dp"
+                        android:id="@+id/modname"
+                        />
+                    <TextView
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="927 EGP"
+                        android:fontFamily="serif"
+
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+
+                        android:layout_marginLeft="18dp"
+                        android:id="@+id/modprice"
+                        />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="addToCartButtonClickmod"
+                        android:text="Add to Cart"
+                        android:layout_marginLeft="18dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center">
+
+                <!-- Category 1 -->
+                <LinearLayout
+                    android:id="@+id/dream"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/v3"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_marginRight="10dp"
+                        android:contentDescription="Image description for accessibility"
+                        />
+
+
+                    <TextView
+                        android:layout_width="138dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="Dreamland"
+                        android:fontFamily="serif"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/dreamname"
+                        />
+                    <TextView
+                        android:layout_width="138dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="1220EGP"
+                        android:fontFamily="serif"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/dreamprice"
+                        />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="addToCartButtonClickdream"
+                        android:text="Add to Cart"
+                        android:layout_marginRight="10dp"/>
+                </LinearLayout>
+
+                <!-- Category 2 -->
+                <LinearLayout
+                    android:id="@+id/vibes"
+                    android:layout_marginBottom="30dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/v4"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_marginLeft="18dp"
+                        android:contentDescription="Image description for accessibility"
+                        />
+
+                    <TextView
+                        android:layout_width="137dp"
+                        android:layout_height="wrap_content"
+                        android:text="Purple vibes"
+                        android:fontFamily="serif"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginLeft="18dp"
+                        android:id="@+id/vibename"
+                        />
+                    <TextView
+                        android:layout_width="137dp"
+                        android:layout_height="wrap_content"
+                        android:text="3100 EGP"
+                        android:fontFamily="serif"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginLeft="18dp"
+                        android:id="@+id/vibeprice"
+                        />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="addToCartButtonClickvibe"
+                        android:text="Add to Cart"
+                        android:layout_marginLeft="15dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Category 3 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center">
+
+                <!-- Category 1 -->
+                <LinearLayout
+                    android:id="@+id/sunny"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/v5"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_marginRight="10dp"
+                        android:contentDescription="Image description for accessibility"
+                        />
+
+
+                    <TextView
+                        android:layout_width="138dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="Sunny lilies"
+                        android:fontFamily="serif"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/sunname"
+                        />
+                    <TextView
+                        android:layout_width="138dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="1398 EGP"
+                        android:fontFamily="serif"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/sunprice"
+                        />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="addToCartButtonClicksun"
+                        android:text="Add to Cart"
+                        android:layout_marginRight="10dp"/>
+                </LinearLayout>
+
+                <!-- Category 2 -->
+                <LinearLayout
+                    android:id="@+id/cleb"
+                    android:layout_marginBottom="30dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/v6"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_marginLeft="18dp"
+                        android:contentDescription="Image description for accessibility"
+                        />
+
+                    <TextView
+                        android:layout_width="137dp"
+                        android:layout_height="wrap_content"
+                        android:text="Celebrity"
+                        android:fontFamily="serif"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginLeft="18dp"
+                        android:id="@+id/celename"
+                        />
+                    <TextView
+                        android:layout_width="137dp"
+                        android:layout_height="wrap_content"
+                        android:text="1088 EGP"
+                        android:fontFamily="serif"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginLeft="18dp"
+                        android:id="@+id/celeprice"
+                        />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="addToCartButtonClickcele"
+                        android:text="Add to Cart"
+                        android:layout_marginLeft="15dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="65dp"
+                android:onClick="gotocart"
+                android:text="Cart"
+                android:textSize="20sp"
+                android:layout_gravity="center"/>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

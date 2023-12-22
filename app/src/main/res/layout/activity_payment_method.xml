@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Your existing content goes here -->
+
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/paymentTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:text="Choose Payment Method"
+            android:textSize="35sp"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/paymentOptionsGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/paymentTitle"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/cashOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cash"
+                android:textSize="25sp"
+                />
+
+            <RadioButton
+                android:id="@+id/visaOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Visa"
+                android:textSize="25sp" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/proceedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/paymentOptionsGroup"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:text="Proceed"
+            android:onClick="onClick"
+            android:textSize="25sp"
+            android:layout_gravity="center"/>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

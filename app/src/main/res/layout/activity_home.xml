@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <LinearLayout
+        android:id="@+id/welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Image and Welcome Text -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/flowwer"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="cursive"
+                android:text="Flora store"
+                android:textColor="#934773"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="cursive"
+                android:text="Welcome to our store"
+                android:textColor="#934773"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <!-- Category Text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Categories"
+            android:fontFamily="cursive"
+            android:textColor="#934773"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:layout_gravity="center"/>
+
+        <!-- Categories -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center">
+
+            <!-- Category 1 -->
+            <LinearLayout
+                android:id="@+id/hand"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/hand"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginRight="10dp"
+                    android:contentDescription="Image description for accessibility"
+                    />
+
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="#934773"
+                    android:text="Hand Bouquet"
+                    android:textColor="@color/white"
+                    android:fontFamily="sans-serif-thin"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginRight="10dp"
+                    />
+            </LinearLayout>
+
+            <!-- Category 2 -->
+            <LinearLayout
+                android:id="@+id/box"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/box"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginLeft="18dp"
+                    android:contentDescription="Image description for accessibility"
+                    />
+
+                <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:background="#934773"
+                    android:text="Boxes"
+                    android:fontFamily="sans-serif-thin"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+
+                    android:layout_marginLeft="18dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center">
+
+            <!-- Category 1 -->
+            <LinearLayout
+                android:id="@+id/vase"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/vase"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginRight="10dp"
+                    android:contentDescription="Image description for accessibility"
+                    />
+
+
+                <TextView
+                    android:layout_width="138dp"
+                    android:layout_height="wrap_content"
+                    android:background="#934773"
+                    android:text="vases"
+                    android:textColor="@color/white"
+                    android:fontFamily="sans-serif-thin"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginRight="10dp"
+                    />
+            </LinearLayout>
+
+            <!-- Category 2 -->
+            <LinearLayout
+                android:id="@+id/jerbs"
+                android:layout_marginBottom="30dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/jerbs"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginLeft="18dp"
+                    android:contentDescription="Image description for accessibility"
+                    />
+
+                <TextView
+                    android:layout_width="137dp"
+                    android:layout_height="wrap_content"
+                    android:background="#934773"
+                    android:text="jerbs"
+                    android:fontFamily="sans-serif-thin"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginLeft="18dp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:onClick="gotocart"
+            android:text="Cart"
+            android:textSize="20sp"
+            android:layout_gravity="center"/>
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:layout_gravity="bottom|end"/>
+        <!-- Footer Section -->
+        <!-- Footer Section -->
+        <LinearLayout
+            android:background="@color/purplee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical|start">
+                <TextView
+                    android:id="@+id/floraText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Flora"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="cursive"
+                    android:textSize="20dp"/>
+            </LinearLayout>
+            <!-- Social Media Logos -->
+
+            <!-- Facebook Logo -->
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/face"
+                android:layout_marginEnd="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="Facebook Logo"
+                android:onClick="openLink"
+                android:tag="https://www.facebook.com"/>
+
+            <!-- Instagram Logo -->
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="20dp"
+                android:clickable="true"
+                android:contentDescription="Instagram Logo"
+                android:focusable="true"
+                android:onClick="openLink"
+                android:src="@drawable/ins"
+                android:tag="https://www.instagram.com/" />
+
+            <!-- TikTok Logo -->
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/tik"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="TikTok Logo"
+                android:onClick="openLink"
+                android:tag="https://www.tiktok.com/"/>
+
+            <!-- Text View (Flora Text) -->
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</ScrollView>
